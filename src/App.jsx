@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import data from "./data/myprojects.json"
 
 /* eslint-disable react/jsx-key */
 function App() {
@@ -15,7 +16,7 @@ function App() {
     <div className="w-3/4 m-auto">
       <div className="mt-20">
       <Slider {...settings}>
-        {data.map((d) => (
+        {data?.myprojects?.map((d) => (
           <div className="bg-white h-[450px] text-black rounded-xl">
             <div className="h-56 rounded-t-xl bg-indigo-500 flex justify-center items-center">
               <img src={d.img} alt="" className="h-44 w-44 rounded-full"/>
@@ -34,27 +35,6 @@ function App() {
   )
 }
 
-const data = [
-  {
-    name: `Budget App`,
-    img: `/MyProjects/BudgetApp.png`,
-    review: `This is the review`
-  },
-  {
-    name: `Countries App`,
-    img: `/MyProjects/CountriesApp.png`,
-    review: `This is the review`
-  },
-  {
-    name: `Motorcycle Booking App`,
-    img: `/MyProjects/MotorcycleBooking.png`,
-    review: `This is the review`
-  },
-  {
-    name: `Space Traveller App`,
-    img: `/MyProjects/SpaceTravellerApp.png`,
-    review: `This is the review`
-  },
-]
+
 
 export default App;
