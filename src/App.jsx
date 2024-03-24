@@ -6,7 +6,6 @@ import MyProjectCard from './components/MyProjectCard';
 
 /* eslint-disable react/jsx-key */
 function App() {
-  
   const settings = {
     dots: true,
     infinite: true,
@@ -15,17 +14,15 @@ function App() {
     slidesToScroll: 1,
   };
   return (
-    <>
     <div className="w-3/4 m-auto">
       <div className="mt-20">
       <Slider {...settings}>
         {data?.myprojects?.map((d) => (
           <MyProjectCard key={d.id} myproject={d} />
         ))}
-        </Slider>
+      </Slider>
       </div>
-    </div> 
-    </>
+    </div>
     
   )
 }
