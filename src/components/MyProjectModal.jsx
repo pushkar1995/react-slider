@@ -8,7 +8,7 @@ const MyProjectModal = ({ onClose, modalData }) => (
     >
     <div
     onClick={(event) => event.stopPropagation()}
-    className="w-[300px] max-w-full h-[300px] bg-white rounded-xl p-4 flex flex-col relative"
+    className="w-[600px] max-w-full h-[600px] bg-white rounded-xl p-4 flex flex-col relative"
     >
     <AiOutlineClose
         className="absolute right-6 top-11 text-3xl text-red-600 cursor-pointer"
