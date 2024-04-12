@@ -15,21 +15,21 @@ function App() {
     slidesToShow: 3,
     slidesToScroll: 1,
   };
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(null);
   return (
     <>
       <div className="w-3/4 m-auto">
       <div className="mt-20">
       <Slider {...settings}>
         {data?.myprojects?.map((d) => (
-          <MyProjectCard key={d.id} myproject={d} onOpen={() => setShowModal(true)} />
+          <MyProjectCard key={d.id} myproject={d} onOpen={() => setShowModal(d)} />
         ))}
       </Slider>
       </div>
       </div>
       {
             showModal && (
-            <MyProjectModal onClose={() => setShowModal(false)} modalData={data} />
+            <MyProjectModal onClose={() => setShowModal(null)} modalData={showModal} />
             )
         }
     </>
